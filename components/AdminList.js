@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function AdminList({ originalItems, refreshItems, deleteItem, showAdd }) {
+export default function AdminList({ originalItems, refreshItems, deleteItem, add }) {
   const [items, setItems] = useState(originalItems);
 
   async function search(term) {
@@ -12,7 +12,7 @@ export default function AdminList({ originalItems, refreshItems, deleteItem, sho
 
   return (
     <div className="flex flex-col gap-y-5">
-      {!showAdd &&
+      {!add &&
         <>
           <div className="w-1/4">
             <input
@@ -55,7 +55,7 @@ export default function AdminList({ originalItems, refreshItems, deleteItem, sho
         </>
       }
 
-      {showAdd &&
+      {add &&
         <>
           <div>Question One</div>
         </>

@@ -4,13 +4,13 @@ import { useState } from "react";
 import AdminHeader from "./AdminHeader";
 import AdminList from "./AdminList";
 
-export default function AdminMain({ originalItems, refreshQuizzes, deleteQuiz }) {
+export default function AdminMain({ title, originalItems, refreshItems, deleteItem, saveItem }) {
   const [add, setAdd] = useState(false);
 
   return (
     <main className="flex flex-col gap-y-10 p-8 w-full">
-      <AdminHeader title="Quizzes" onAdd={() => setAdd(true)} />
-      <AdminList originalItems={originalItems} refreshItems={refreshQuizzes} deleteItem={deleteQuiz} showAdd={add} />
+      <AdminHeader title={title} add={add} saveItem={saveItem} onAdd={() => setAdd(!add)} />
+      <AdminList originalItems={originalItems} refreshItems={refreshItems} deleteItem={deleteItem} add={add} />
     </main>
   );
 }

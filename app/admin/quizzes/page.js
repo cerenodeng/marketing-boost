@@ -14,6 +14,12 @@ async function deleteQuiz(id) {
   return data;
 }
 
+async function saveQuiz(data) {
+  'use server';
+
+  return data;
+}
+
 export default function Quizzes() {
   const originalItems = [
     { id: 1, title: 'Quizz One', start_date: '2023-7-18', start_time: '9:00', end_date: '2023-7-19', end_time: '12:00' },
@@ -22,6 +28,6 @@ export default function Quizzes() {
   ];
 
   return (
-    <AdminMain originalItems={originalItems} refreshQuizzes={refreshQuizzes} deleteQuiz={deleteQuiz} />
+    <AdminMain title="Quizzes" originalItems={originalItems} refreshItems={refreshQuizzes} deleteItem={deleteQuiz} saveItem={saveQuiz} />
   );
 }
