@@ -4,9 +4,10 @@ export default function AdminHeader({ title, add, saveItem, onAdd }) {
       <h1 className="text-3xl font-bold">{title}</h1>
       {!add &&
         <button className="action" onClick={onAdd}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+          <svg className="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 1v16M1 9h16" />
           </svg>
+          Add
         </button>
       }
 
