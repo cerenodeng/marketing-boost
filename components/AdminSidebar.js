@@ -10,8 +10,8 @@ export default function AdminSidebar() {
   ];
 
   return (
-    <aside className="flex-none flex flex-col bg-indigo-900 w-72 h-screen shadow-2xl shadow-indigo-900/50">
-      <Link href="/admin" className="text-gray-500 px-8 py-10">Marketing Boost</Link>
+    <aside className="flex-none flex flex-col bg-indigo-900 w-64 h-screen shadow-2xl shadow-indigo-900/50">
+      <Link href="/admin" className="text-gray-300 px-8 py-10">Marketing Boost</Link>
 
       <nav className="flex flex-col grow gap-y-px">
         {navs.map((data) => (
