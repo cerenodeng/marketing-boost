@@ -7,9 +7,9 @@ export default function LabelInput({ label, name, placeholder }) {
 
   return (
     <div className="flex flex-col gap-y-2">
-      <label className={emptyInput ? 'invisible' : 'visible'} htmlFor={name}>{label}</label>
+      <label className={`label ${emptyInput ? 'invisible' : 'visible'}`} htmlFor={name}>{label}</label>
       <input
-        className="placeholder:italic"
+        className="input"
         name={name}
         placeholder={placeholder}
         onChange={(event) => event.target.value.length == 0 ? setEmptyInput(true) : setEmptyInput(false)}

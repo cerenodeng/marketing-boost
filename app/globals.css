@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-label {
+.label {
 	@apply text-base font-semibold;
 }
 
-input {
-	@apply text-lg font-normal py-4 border border-x-0 border-indigo-900 focus:border-indigo-900/50 focus:outline-none;
+.input {
+	@apply text-lg font-normal px-2 py-3 border border-x-0 border-indigo-900 focus:border-indigo-900/50 focus:outline-none;
 }
 
 button.action {
