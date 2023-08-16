@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+label {
+	@apply text-base font-semibold;
+}
+
+input {
+	@apply text-lg font-normal py-4 border border-x-0 border-indigo-900 focus:border-indigo-900/50 focus:outline-none;
+}
+
 button.action {
 	@apply flex text-white bg-indigo-900 p-2.5 border-2 border-transparent rounded items-center hover:text-indigo-900 hover:bg-white hover:border-2 hover:border-indigo-900;
 }
